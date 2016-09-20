@@ -1,5 +1,4 @@
-﻿using System.Data;
-using NServiceBus;
+﻿using NServiceBus;
 
 namespace ExampleWeb
 {
@@ -22,7 +21,6 @@ namespace ExampleWeb
                 }
                     
                 var configuration = new BusConfiguration();
-                configuration.UseTransport<MsmqTransport>();
                 configuration.UsePersistence<InMemoryPersistence>();
                 configuration.EndpointName("ExampleWeb");
                 configuration.PurgeOnStartup(true);
