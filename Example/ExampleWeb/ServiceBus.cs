@@ -22,6 +22,7 @@ namespace ExampleWeb
                     
                 var configuration = new BusConfiguration();
                 configuration.UsePersistence<InMemoryPersistence>();
+                configuration.UseTransport<RabbitMQTransport>();
                 configuration.EndpointName("ExampleWeb");
                 configuration.PurgeOnStartup(true);
                 configuration.EnableInstallers();

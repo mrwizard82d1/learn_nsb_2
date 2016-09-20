@@ -21,6 +21,7 @@ namespace WelcomeEmailService
             //Also note that you can mix and match storages to fit you specific needs. 
             //http://docs.particular.net/nservicebus/persistence-order
             configuration.UsePersistence<InMemoryPersistence>();
+            configuration.UseTransport<RabbitMQTransport>();
         }
     }
 }

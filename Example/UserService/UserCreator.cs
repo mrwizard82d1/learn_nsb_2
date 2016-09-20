@@ -11,6 +11,7 @@ namespace UserService
         public IBus Bus { get; set; }
 
         private static readonly ILog Log = LogManager.GetLogger(typeof(UserCreator));
+
         public void Handle(CreateNewUserCmd message)
         {
             Log.InfoFormat("Creating user '{0}' with email '{1}'.", message.Name, message.EmailAddress);
