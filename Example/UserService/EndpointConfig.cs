@@ -21,6 +21,7 @@ namespace UserService
             //http://docs.particular.net/nservicebus/persistence-order
             configuration.UsePersistence<InMemoryPersistence>();
             configuration.UseTransport<RabbitMQTransport>();
+            configuration.UseSerialization<JsonSerializer>();
         }
     }
 }
